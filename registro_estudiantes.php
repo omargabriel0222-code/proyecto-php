@@ -95,7 +95,7 @@ $asignaturas = [
 </main>
 
 <footer>
-    <p>Desarrollado Por: [TU NOMBRE] y [NOMBRE DE TU COMPAÑERO] – Grupo 1S3221</p>
+    <p>Desarrollado Por: OMAR HERRERA y PAUL ZERPA – Grupo 1S3221</p>
 </footer>
 
 </body>

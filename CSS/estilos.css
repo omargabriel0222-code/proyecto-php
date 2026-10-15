@@ -1,0 +1,241 @@
+/* ============================================
+   Portal de Registro y Consulta de Estudiantes
+   ============================================ */
+
+/* 1. PALETA (cambiando estos valores se cambia todo el sitio) */
+:root {
+    --primario: #0f4c5c;
+    --primario-oscuro: #0a3540;
+    --acento: #f4a261;
+    --fondo: #f1f5f9;
+    --tarjeta: #ffffff;
+    --texto: #1e293b;
+    --borde: #cbd5e1;
+    --ok: #15803d;
+    --ok-fondo: #dcfce7;
+    --error: #b91c1c;
+    --error-fondo: #fee2e2;
+}
+
+/* 2. BASE
+   El body es una columna flexible para que el footer
+   quede abajo aunque la página tenga poco contenido. */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', system-ui, Arial, sans-serif;
+    line-height: 1.6;
+    color: var(--texto);
+    background-color: var(--fondo);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* 3. HEADER Y NAVEGACIÓN */
+header {
+    background-color: var(--primario);
+    color: #ffffff;
+    padding: 20px;
+    text-align: center;
+    border-bottom: 4px solid var(--acento);
+}
+
+header h1 {
+    font-size: 1.6rem;
+    margin-bottom: 10px;
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 8px 16px;
+    margin: 0 4px;
+    border-radius: 6px;
+    transition: background-color 0.2s;
+}
+
+nav a:hover {
+    background-color: rgba(255, 255, 255, 0.18);
+}
+
+/* 4. CONTENIDO PRINCIPAL */
+main {
+    flex: 1;
+    width: 100%;
+    max-width: 800px;
+    margin: 30px auto;
+    padding: 0 16px;
+}
+
+section {
+    background-color: var(--tarjeta);
+    border-radius: 12px;
+    padding: 28px;
+    box-shadow: 0 2px 10px rgba(15, 76, 92, 0.12);
+}
+
+section h2 {
+    color: var(--primario);
+    margin-bottom: 18px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--acento);
+}
+
+section p {
+    margin-bottom: 16px;
+}
+
+/* 5. FORMULARIO */
+.form-grupo {
+    margin-bottom: 18px;
+}
+
+label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 6px;
+}
+
+input,
+select {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid var(--borde);
+    border-radius: 8px;
+    font-size: 1rem;
+    font-family: inherit;
+    color: var(--texto);
+    background-color: #ffffff;
+}
+
+input:focus,
+select:focus {
+    outline: none;
+    border-color: var(--primario);
+    box-shadow: 0 0 0 3px rgba(15, 76, 92, 0.2);
+}
+
+/* 6. BOTONES */
+.btn {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: var(--primario);
+    color: #ffffff;
+    border: 2px solid var(--primario);
+    border-radius: 8px;
+    font-size: 1rem;
+    font-family: inherit;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.1s;
+}
+
+.btn:hover {
+    background-color: var(--primario-oscuro);
+    transform: translateY(-1px);
+}
+
+.btn + .btn {
+    margin-left: 10px;
+}
+
+.btn-secundario {
+    background-color: transparent;
+    color: var(--primario);
+}
+
+.btn-secundario:hover {
+    background-color: var(--primario);
+    color: #ffffff;
+}
+
+/* 7. RESULTADOS (para procesar_estudiantes.php) */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 16px 0;
+}
+
+th,
+td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid var(--borde);
+}
+
+th {
+    background-color: var(--primario);
+    color: #ffffff;
+}
+
+tr:nth-child(even) td {
+    background-color: #f8fafc;
+}
+
+.aprobado {
+    color: var(--ok);
+    background-color: var(--ok-fondo);
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-weight: 700;
+}
+
+.reprobado {
+    color: var(--error);
+    background-color: var(--error-fondo);
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-weight: 700;
+}
+
+.alerta {
+    color: var(--error);
+    background-color: var(--error-fondo);
+    border-left: 4px solid var(--error);
+    padding: 12px 16px;
+    border-radius: 8px;
+    margin-bottom: 16px;
+}
+
+/* 8. FOOTER */
+footer {
+    background-color: var(--primario-oscuro);
+    color: #e2e8f0;
+    text-align: center;
+    padding: 18px;
+    font-size: 0.9rem;
+}
+
+/* 9. RESPONSIVO (celulares) */
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 1.3rem;
+    }
+
+    nav a {
+        display: block;
+        margin: 6px 0;
+    }
+
+    section {
+        padding: 20px 16px;
+    }
+
+    .btn {
+        display: block;
+        width: 100%;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    .btn + .btn {
+        margin-left: 0;
+    }
+}
