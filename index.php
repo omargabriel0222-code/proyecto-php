@@ -21,8 +21,19 @@ $titulo_sistema = "Portal de Registro y Consulta de Estudiantes";
 </header>
 
 <main>
-
+    <section>
+        <h2>Bienvenido</h2>
+        <p>
+            Este sistema permite registrar estudiantes con sus notas,
+            calcular su promedio y consultar si un estudiante ya fue registrado.
+        </p>
+        <a href="registro_estudiantes.php" class="btn">Ir al formulario de registro</a>
+    </section>
 </main>
+
+<footer>
+    <p>Desarrollado Por: OMAR HERRERA y PAUL ZERPA – Grupo 1S3221</p>
+</footer>
 
 </body>
 </html>
