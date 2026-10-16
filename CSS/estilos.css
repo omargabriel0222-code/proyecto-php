@@ -239,3 +239,7 @@ footer {
         margin-left: 0;
     }
 }
+
+section + section {
+    margin-top: 24px;
+}

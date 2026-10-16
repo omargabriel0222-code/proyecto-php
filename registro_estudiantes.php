@@ -28,6 +28,7 @@ $asignaturas = [
     <nav>
         <a href="index.php">Inicio</a>
         <a href="registro_estudiantes.php">Registro</a>
+        <a href="procesar_estudiantes.php">Consultar</a>
     </nav>
 </header>
 
